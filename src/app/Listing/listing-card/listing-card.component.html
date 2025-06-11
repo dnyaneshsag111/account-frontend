@@ -1,0 +1,73 @@
+<div class="card shadow border-0 rounded-4 overflow-hidden h-100">
+    <!-- Card Image Section -->
+    <div class="position-relative">
+      <div class="position-absolute d-flex justify-content-between w-100 p-3 z-1">
+        <span *ngIf="hotel.featured" class="badge rounded-pill bg-white text-dark px-3 py-2 fw-normal">Featured</span>
+        <span class="badge rounded-pill bg-white text-dark px-3 py-2 fw-normal">{{hotel.priceRange}}</span>
+      </div>
+  
+      <img 
+        [src]="hotel.image || 'assets/images/placeholder.jpg'" 
+        alt="Hotel spa image"
+        class="card-img-top object-fit-cover"
+        style="height: 200px;"
+      />
+  
+      <div class="position-absolute bottom-0 start-0 p-3">
+        <button class="btn btn-light rounded-circle p-2 shadow-sm" (click)="saveHotel()">
+          <i class="bi bi-heart text-secondary"></i>
+        </button>
+        <span class="ms-2 text-white">Save</span>
+      </div>
+
+    </div>
+  
+    <!-- Card Body -->
+    <div class="card-body p-3">
+      <!-- Rating -->
+      <div class="mb-2">
+        <span *ngFor="let star of stars; let i = index" class="text-warning me-1">
+          <i [class]="i < hotel.rating ? 'bi bi-star-fill' : 'bi bi-star'"></i>
+        </span>
+        <span class="text-secondary ms-1">({{hotel.reviews}} review)</span>
+      </div>
+  
+      <!-- Title -->
+      <h5 class="card-title d-flex align-items-center mb-2">
+        {{hotel.name}}
+        <span *ngIf="hotel.verified" class="ms-2 badge rounded-pill bg-danger bg-opacity-25 text-danger p-1">
+          <span class="visually-hidden">Verified</span>✓
+        </span>
+      </h5>
+  
+      <!-- Description -->
+      <p class="card-text text-secondary mb-3 small">{{hotel.description}}</p>
+  
+      <!-- Location and Contact -->
+      <div class="d-flex justify-content-between mb-3 small">
+        <div class="d-flex align-items-center text-secondary">
+          <i class="bi bi-geo-alt me-1"></i>
+          <span>{{hotel.location}}</span>
+        </div>
+        <div class="d-flex align-items-center text-secondary">
+          <i class="bi bi-telephone me-1"></i>
+          <span>{{hotel.phone}}</span>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <!-- Footer -->
+      <div class="d-flex justify-content-between align-items-center small">
+        <div class="d-flex align-items-center">
+          <span class="badge rounded-pill bg-info bg-opacity-25 p-2 me-2">
+            <span class="visually-hidden">Hotel icon</span>🏨
+          </span>
+          <span class="text-info">{{hotel.category}}</span>
+          <span class="ms-3 badge rounded-pill bg-light text-secondary">+{{hotel.additionalCategories}}</span>
+        </div>
+        <div class="text-secondary">{{hotel.status}}</div>
+      </div>
+    </div>
+  </div>
+  

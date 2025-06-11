@@ -1,0 +1,46 @@
+<div class="auth-wrapper">
+    <div class="auth-container">
+      <div class="auth-bg"><span class="r"></span><span class="r s"></span><span class="r s"></span><span class="r"></span></div>
+      <div class="card">
+          <div class="card-body text-center">
+              <fa-icon [icon]="faUserPlus" class="icon mb-4"></fa-icon>
+              <h3 class="card-title mb-4">Sign up </h3>
+              <div class="form-container">
+                  <form >
+                      <div class="input-group mb-3">
+                         <input type="text" placeholder="Account Name"  class="form-control" required>
+                      </div>
+                      <div class="input-group mb-3">
+                         <input type="email" placeholder="Email"  class="form-control" required>
+                      </div>
+                      <div class="input-group mb-3">
+                         <input type="text" placeholder="UserName" class="form-control" required>
+                      </div>
+                      <div class="input-group mb-3">
+                         <input type="password" placeholder="Password" class="form-control" required>
+                      </div>
+                      <div class="input-group mb-3">
+                         <input type="password" placeholder="Password" class="form-control" required>
+                      </div>
+                      <div class="input-group mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select user type</option>
+                            <option value="1">Partner</option>
+                            <option value="2">Customer</option>
+                          </select>
+                      </div>
+                      <div class="input-group mb-3">
+                         <input type="text" placeholder="Mobile Number" class="form-control" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary mb-4">Sign up</button>
+                      
+                          <p class="mb-2 text-muted">Already have an account?  <a routerLink="/register">Login</a></p>
+                   </form>
+              </div>
+              
+  
+          </div>
+  
+      </div>
+    </div>
+  </div>

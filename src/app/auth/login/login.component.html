@@ -1,0 +1,28 @@
+<div class="auth-wrapper">
+  <div class="auth-container">
+    <div class="auth-bg"><span class="r"></span><span class="r s"></span><span class="r s"></span><span class="r"></span></div>
+    <div class="card">
+        <div class="card-body text-center">
+            <fa-icon [icon]="faUnlock" class="icon mb-4"></fa-icon>
+            <h3 class="card-title mb-4">Login</h3>
+            <div class="form-container">
+                <form >
+                    <div class="input-group mb-3">
+                       <input type="email" placeholder="Email"  class="form-control" required>
+                    </div>
+                    <div class="input-group mb-3">
+                       <input type="password" placeholder="Password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-4">Login</button>
+                 </form>
+                                     
+                        <p class="mb-2 text-muted">Don't have an account? <a class="nav-link" href="/signup">Register</a></p>
+                        <p class="mb-2 text-muted">Forgot your password? <a routerLink="/forgot-password">Reset Password</a></p>
+            </div>
+            
+
+        </div>
+
+    </div>
+  </div>
+</div>
